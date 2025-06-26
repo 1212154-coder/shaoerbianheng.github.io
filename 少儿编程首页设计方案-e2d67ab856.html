@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeFuture - 少儿编程教育专家</title>
+    <script src="https://cdn.tailwindcss.com/3.3.3"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif;
+            color: #1f2937;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), 
+                        url('https://s.coze.cn/image/xKck8YAXQog/');
+            background-size: cover;
+            background-position: center;
+            min-height: 80vh;
+        }
+        
+        .course-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            border-radius: 16px;
+            overflow: hidden;
+        }
+        
+        .course-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background-color: #f3f4f6;
+            color: #3b82f6;
+            border-radius: 50%;
+        }
+        
+        .enroll-btn {
+            transition: all 0.3s ease;
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 6px rgba(59, 130, 246, 0.25);
+        }
+        
+        .enroll-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 15px rgba(59, 130, 246, 0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -8px;
+            left: 0;
+            width: 50%;
+            height: 3px;
+            background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="bg-white py-6 px-6 md:px-12 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center">
+                <i class="fas fa-code text-3xl text-blue-500 mr-3"></i>
+                <span class="text-2xl font-semibold">CodeFuture</span>
+            </div>
+            <div class="hidden md:flex space-x-10">
+                <a href="#courses" class="text-gray-600 hover:text-blue-500 transition">课程介绍</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-500 transition">关于我们</a>
+                <a href="#features" class="text-gray-600 hover:text-blue-500 transition">核心优势</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-500 transition">联系我们</a>
+            </div>
+            <button class="md:hidden text-gray-600 focus:outline-none" id="mobileMenuButton">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- 移动端菜单 -->
+        <div class="md:hidden hidden bg-white w-full mt-4 rounded-lg shadow-lg py-3" id="mobileMenu">
+            <a href="#courses" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500">课程介绍</a>
+            <a href="#about" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500">关于我们</a>
+            <a href="#features" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500">核心优势</a>
+            <a href="#contact" class="block px-4 py-2 text-gray-700 hover:bg-blue-50 hover:text-blue-500">联系我们</a>
+        </div>
+    </nav>
+
+    <!-- 主视觉Banner -->
+    <section class="hero-section flex items-center justify-center text-white">
+        <div class="max-w-4xl mx-auto text-center px-6">
+            <h1 class="text-4xl md:text-6xl font-bold mb-8 leading-tight">释放您孩子的编程潜能！</h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90">在充满乐趣的学习环境中，让创造力与科技相遇</p>
+            <a href="#courses" class="enroll-btn inline-block px-12 py-4 rounded-full text-white text-lg font-medium">探索课程</a>
+        </div>
+    </section>
+
+    <!-- 核心产品模块 -->
+    <section id="courses" class="py-20 px-6 md:px-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">核心课程</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <!-- Scratch课程 -->
+                <div class="course-card bg-white">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://s.coze.cn/image/ppcueI4OPE8/" alt="Scratch编程" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-4">Scratch图形化编程</h3>
+                        <p class="text-gray-600 mb-6">让孩子们以有趣和富有创意的方式开启编程之旅。</p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">6-10岁</span>
+                            <span class="px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">视觉学习</span>
+                            <span class="px-4 py-1 bg-blue-100 text-blue-600 rounded-full text-sm">游戏设计</span>
+                        </div>
+                        <a href="#" class="inline-block w-full text-center py-3 bg-blue-50 text-blue-500 rounded-lg hover:bg-blue-100 transition">了解更多</a>
+                    </div>
+                </div>
+                
+                <!-- Python课程 -->
+                <div class="course-card bg-white">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://s.coze.cn/image/7ISnvF8j44w/" alt="Python编程" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-8">
+                        <h3 class="text-2xl font-semibold mb-4">Python编程</h3>
+                        <p class="text-gray-600 mb-6">深入高级编程世界，培养逻辑思维和问题解决能力。</p>
+                        <div class="flex flex-wrap gap-3 mb-6">
+                            <span class="px-4 py-1 bg-green-100 text-green-600 rounded-full text-sm">10-16岁</span>
+                            <span class="px-4 py-1 bg-green-100 text-green-600 rounded-full text-sm">真实编程</span>
+                            <span class="px-4 py-1 bg-green-100 text-green-600 rounded-full text-sm">项目实践</span>
+                        </div>
+                        <a href="#" class="inline-block w-full text-center py-3 bg-green-50 text-green-500 rounded-lg hover:bg-green-100 transition">了解更多</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 品牌介绍 -->
+    <section id="about" class="py-20 px-6 md:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <div class="md:w-1/2">
+                    <img src="https://s.coze.cn/image/H6zc4Zbzu2s/" alt="我们的团队" class="rounded-2xl shadow-xl w-full">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold mb-8 section-title">关于CodeFuture</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        CodeFuture是一家致力于为儿童提供高质量编程教育的领先机构。我们的使命是通过创新的教学方法和引人入胜的课程，激发下一代程序员的潜能。
+                    </p>
+                    <p class="text-gray-600 mb-8 leading-relaxed">
+                        自2015年成立以来，我们已经帮助超过10,000名学生发现他们对技术的热爱。我们的课程由来自顶尖科技公司和知名高校的专家团队精心设计，确保内容的前沿性和实用性。
+                    </p>
+                    <div class="flex items-center">
+                        <i class="fas fa-award text-4xl text-blue-500 mr-6"></i>
+                        <div>
+                            <h3 class="font-semibold text-xl">教育创新奖</h3>
+                            <p class="text-gray-500">荣获2023年度最佳少儿编程教育机构</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 卖点提炼 -->
+    <section id="features" class="py-20 px-6 md:px-12 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 section-title">为什么选择我们</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <!-- 专业师资 -->
+                <div class="text-center">
+                    <div class="feature-icon flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-chalkboard-teacher text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">专业的教师</h3>
+                    <p class="text-gray-600">我们的讲师经验丰富，对编程教学充满热情，能够用孩子理解的方式传授复杂概念。</p>
+                </div>
+                
+                <!-- 个性化学习 -->
+                <div class="text-center">
+                    <div class="feature-icon flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-user-graduate text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">个性化学习</h3>
+                    <p class="text-gray-600">量身定制的课程计划，适应每个孩子的学习节奏和兴趣点，确保最佳学习效果。</p>
+                </div>
+                
+                <!-- 实践项目 -->
+                <div class="text-center">
+                    <div class="feature-icon flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-laptop-code text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-3">实践项目</h3>
+                    <p class="text-gray-600">通过真实世界的项目应用所学知识，培养解决实际问题的能力，构建个人作品集。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 购买引导 -->
+    <section class="py-20 px-6 md:px-12 bg-gradient-to-r from-blue-500 to-blue-600 text-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">迈出您孩子编程成功的第一步！</h2>
+            <p class="text-xl mb-8 opacity-90">2024年暑期班火热招生中，名额有限，立即报名</p>
+            <a href="#" class="enroll-btn inline-block px-14 py-4 rounded-full text-white text-lg font-medium">立即报名</a>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer id="contact" class="bg-gray-900 text-white py-16 px-6 md:px-12">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+            <div>
+                <h3 class="text-xl font-semibold mb-6">CodeFuture</h3>
+                <p class="text-gray-400">激发年轻一代的编程潜能，创造无限可能。</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">联系方式</h3>
+                <p class="text-gray-400 mb-3"><i class="fas fa-map-marker-alt mr-3"></i> 北京市海淀区科技园路88号</p>
+                <p class="text-gray-400 mb-3"><i class="fas fa-phone mr-3"></i> 400-123-4567</p>
+                <p class="text-gray-400"><i class="fas fa-envelope mr-3"></i> info@codefuture.com</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">营业时间</h3>
+                <p class="text-gray-400 mb-2">周一至周五: 9:00 - 18:00</p>
+                <p class="text-gray-400">周六: 10:00 - 16:00</p>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">关注我们</h3>
+                <div class="flex space-x-5">
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-weixin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-weibo"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-douyin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition text-xl"><i class="fab fa-bilibili"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-16 pt-8 border-t border-gray-800 text-center text-gray-400 text-sm">
+            <p>© 2024 CodeFuture. 保留所有权利。</p>
+            <p class="mt-3">Created by <a href="https://space.coze.cn" class="text-blue-400 hover:underline">coze space</a> | 页面内容均由 AI 生成，仅供参考</p>
+        </div>
+    </footer>
+
+    <script>
+        // 移动端菜单切换
+        document.getElementById('mobileMenuButton').addEventListener('click', function() {
+            const menu = document.getElementById('mobileMenu');
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+            } else {
+                menu.classList.add('hidden');
+            }
+        });
+
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                // 如果是移动端菜单中的链接，点击后关闭菜单
+                if (this.parentElement.id === 'mobileMenu') {
+                    document.getElementById('mobileMenu').classList.add('hidden');
+                }
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
